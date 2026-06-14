@@ -73,9 +73,9 @@ store.on("error", (err) => {
     console.log("ERROR in MONGO SESSION STORE", err);
 });
 app.use(session(sessionOptions));
-// app.get("/",(req, res)=>{
-//     res.send("hi i m root");
-// });
+app.get("/",(req, res)=>{
+  res.redirect("/listings");
+});
 
 
 
